@@ -1,5 +1,5 @@
 
-
+/*cd
 const sumTheArray = function(data){
   let total = 0
   for (let i = 0; i < data.length; i++){
@@ -30,4 +30,22 @@ const oddarray = []
   }
 };
 conditionalSum ([1, 2, 3, 4, 5], "even");
-conditionalSum ([6, 7, 8, 9, 10], "odd")
+conditionalSum ([6, 7, 8, 9, 10], "odd");
+*/
+
+const conditionalSum = function (values, conditions){
+  let total = 0;
+  for (let value of values){
+    if (conditions === "even" && value % 2 == 0){
+      total += value;
+    }
+    else if (conditions === "odd" && value % 2 != 0){
+      total += value;
+    }
+    //else return 0 
+  }
+return total
+}
+console.log (conditionalSum ([1, 2, 3, 4, 5], "even"));
+console.log (conditionalSum ([1, 2, 3, 4, 5], "odd"));
+console.log (conditionalSum ([], "odd"))
